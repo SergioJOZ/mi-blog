@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 
 const connection = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    });
     //Paramteros dentro de objeto //SOLO EN CASO DE AVISO
     //useNewUrlParser : true
     //useUnifiedTopology : true
