@@ -1,0 +1,5 @@
+start cmd.exe /k "cd C:\Program Files\MongoDB\Server\6.0\bin && mongod.exe"
+start cmd.exe /k "cd C:\Users\Sergio\Desktop\Master React\api-rest-node && npm start"
+start cmd.exe /k "cd C:\Users\Sergio\Desktop\Master React\015-proyecto3 && npm run dev"
+start cmd.exe /k "cd C:\Users\Sergio\AppData\Local\Postman && Postman.exe"
+start cmd.exe /k "cd C:\Users\Sergio\AppData\Local\MongoDBCompass && MongoDBCompass.exe"
