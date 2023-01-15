@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { Global } from "../../../helpers/Global";
-import { Peticion } from "../../../helpers/Peticion";
+import { Global } from "../../helpers/Global";
+import { Peticion } from "../../helpers/Peticion";
 import { List } from "./List";
 
 export const Articles = () => {

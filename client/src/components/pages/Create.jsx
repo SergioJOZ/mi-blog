@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Global } from "../../../helpers/Global";
-import { Peticion } from "../../../helpers/Peticion";
+import { Global } from "../../helpers/Global";
+import { Peticion } from "../../helpers/Peticion";
 import { useForm } from "../../hooks/useForm";
 
 export const Create = () => {

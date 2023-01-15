@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Peticion } from "../../../helpers/Peticion";
-import { Global } from "../../../helpers/Global";
+import { Peticion } from "../../helpers/Peticion";
+import { Global } from "../../helpers/Global";
 
 export const Article = () => {
   const [article, setArticle] = useState({});

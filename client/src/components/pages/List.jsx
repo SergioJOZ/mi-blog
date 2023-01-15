@@ -1,6 +1,6 @@
 import React from "react";
-import { Global } from "../../../helpers/Global";
-import { Peticion } from "../../../helpers/Peticion";
+import { Global } from "../../helpers/Global";
+import { Peticion } from "../../helpers/Peticion";
 import { Link } from "react-router-dom";
 
 export const List = ({ articles, setArticles }) => {
