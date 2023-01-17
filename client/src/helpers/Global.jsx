@@ -1,1 +1,1 @@
-export const Global = import.meta.env.BACKEND_URL;
+export const Global = import.meta.env.VITE_BACKEND_URL;
