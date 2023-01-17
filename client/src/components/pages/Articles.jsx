@@ -26,7 +26,6 @@ export const Articles = () => {
     }
   };
  */
-    console.log(import.meta.env);
 
     let { datos, cargando } = await Peticion(Global + "articulos", "GET");
 
