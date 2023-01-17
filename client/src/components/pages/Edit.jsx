@@ -17,7 +17,7 @@ export const Edit = () => {
   }, []);
 
   const getArticle = async () => {
-    let { datos } = await Peticion(Global.url + "articulo/" + params.id, "GET");
+    let { datos } = await Peticion(Global + "articulo/" + params.id, "GET");
 
     if (datos.status === "success") {
       setArticle(datos.article);
@@ -32,7 +32,7 @@ export const Edit = () => {
 
     //Guardar articulos en el backend
     const { datos, cargando } = await Peticion(
-      Global.url + "articulo/" + params.id,
+      Global + "articulo/" + params.id,
       "PUT",
       newArticle
     );
@@ -51,7 +51,7 @@ export const Edit = () => {
       formData.append("file0", fileInput.files[0]);
 
       const subida = await Peticion(
-        Global.url + "subir-imagen/" + datos.articleSaved._id,
+        Global + "subir-imagen/" + datos.articleSaved._id,
         "POST",
         formData,
         true
@@ -93,7 +93,7 @@ export const Edit = () => {
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" />
             )}
             {article.image != "default.png" && (
-              <img src={Global.url + "imagen/" + article.image} />
+              <img src={Global + "imagen/" + article.image} />
             )}
           </div>
           <textarea

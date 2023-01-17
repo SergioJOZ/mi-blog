@@ -4,8 +4,6 @@ export const Peticion = async (
   datosGuardar = "",
   archivos = false
 ) => {
-  console.log(url);
-
   let cargando = true;
 
   let opciones = {

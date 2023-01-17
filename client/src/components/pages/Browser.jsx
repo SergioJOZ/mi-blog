@@ -20,7 +20,7 @@ export const Browser = () => {
 
   const getArticles = async () => {
     let { datos, cargando } = await Peticion(
-      Global.url + "buscar/" + params.busqueda,
+      Global + "buscar/" + params.busqueda,
       "GET"
     );
 

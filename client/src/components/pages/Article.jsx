@@ -15,7 +15,7 @@ export const Article = () => {
 
   const getArticle = async () => {
     let { datos, cargando } = await Peticion(
-      Global.url + "articulo/" + params.id,
+      Global + "articulo/" + params.id,
       "GET"
     );
 
@@ -37,7 +37,7 @@ export const Article = () => {
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" />
             )}
             {article.image != "default.png" && (
-              <img src={Global.url + "imagen/" + article.image} />
+              <img src={Global + "imagen/" + article.image} />
             )}
           </div>
           <h1>{article.title}</h1>

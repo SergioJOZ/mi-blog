@@ -16,7 +16,7 @@ export const Create = () => {
 
     //Guardar articulos en el backend
     const { datos, cargando } = await Peticion(
-      Global.url + "crear-articulo",
+      Global + "crear-articulo",
       "POST",
       newArticle
     );
@@ -35,7 +35,7 @@ export const Create = () => {
       formData.append("file0", fileInput.files[0]);
 
       const subida = await Peticion(
-        Global.url + "subir-imagen/" + datos.articleSaved._id,
+        Global + "subir-imagen/" + datos.articleSaved._id,
         "POST",
         formData,
         true

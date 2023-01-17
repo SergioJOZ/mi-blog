@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const List = ({ articles, setArticles }) => {
   const eliminar = async (id) => {
-    let { datos } = await Peticion(Global.url + "articulo/" + id, "DELETE");
+    let { datos } = await Peticion(Global + "articulo/" + id, "DELETE");
 
     if (datos.status === "success") {
       const articlesUpdated = articles.filter((article) => article._id !== id);
@@ -22,7 +22,7 @@ export const List = ({ articles, setArticles }) => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" />
           )}
           {article.image != "default.png" && (
-            <img src={Global.url + "imagen/" + article.image} />
+            <img src={Global + "imagen/" + article.image} />
           )}
         </div>
         <div className="data">
