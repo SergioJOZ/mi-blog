@@ -9,6 +9,8 @@ export const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [cargando, setCargando] = useState(true);
 
+  const backend = import.meta.env.BACKEND_URL;
+
   useEffect(() => {
     getArticles();
   }, []);
@@ -27,7 +29,7 @@ export const Articles = () => {
   };
  */
 
-    let { datos, cargando } = await Peticion(Global.url + "articulos", "GET");
+    let { datos, cargando } = await Peticion(backend + "articulos", "GET");
 
     if (datos.status === "success") {
       setArticles(datos.articles);
